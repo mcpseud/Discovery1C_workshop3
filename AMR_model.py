@@ -21,7 +21,7 @@ def run_model(allocation_function):
     efficacyA = 0.01 # efficacy of antibiotic A
     efficacyB = 0.005 # efficacy of antibiotic B
     mortality = 0.01 # death rate from infection
-    costA = 0.002 # cost of carrying resistance mutation A
+    costA = 0.003 # cost of carrying resistance mutation A
     costB = 0.002 # cost of carrying resistance mutation B
     mutation = 0.00001 # rate at which infections change genotype
     
