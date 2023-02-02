@@ -55,7 +55,7 @@ def run_model(allocation_function):
             A=0
             B=0
         # implement difference equations
-        sensitive.append(sensitive[-1] + beta*sensitive[-1]*uninfected[-1] - (A*efficacyA + B*efficacyB + clearance + mortality)*sensitive[-1] - 2*mutation*sensitive[-1] + mutation*resistant_A[-1] + 0.5*mutation*resistant_B[-1])
+        sensitive.append(sensitive[-1] + beta*sensitive[-1]*uninfected[-1] - (A*efficacyA + B*efficacyB + clearance + mortality)*sensitive[-1] - 2*mutation*sensitive[-1] + mutation*resistant_A[-1] + mutation*resistant_B[-1])
         resistant_A.append(resistant_A[-1] + beta*resistant_A[-1]*uninfected[i-1] - (B*efficacyB + clearance + mortality + costA)*resistant_A[-1] + mutation*sensitive[-1] + mutation*resistant_AB[-1] - 2*mutation*resistant_A[-1])
         resistant_B.append(resistant_B[-1] + beta*resistant_B[-1]*uninfected[i-1] - (A*efficacyA + clearance + mortality + costB)*resistant_B[-1] + mutation*sensitive[-1] + mutation*resistant_AB[-1] - 2*mutation*resistant_B[-1])
         resistant_AB.append(resistant_AB[-1] + beta*resistant_AB[-1]*uninfected[i-1] - (clearance + mortality + costA + costB)*resistant_AB[-1] + mutation*resistant_B[-1] + mutation*resistant_A[-1] - 2*mutation*resistant_AB[-1])
